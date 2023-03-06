@@ -1,0 +1,124 @@
+touch file1
+vi file1
+i --> insert mode
+esc
+ZZ --> :wq! --> save the file and quit
+
+git version
+git clone https://github.com/raushan8586/intellipaat28Jan2023.git (.git)
+
+WD --> git add --> SA --> git commit --> LR --> git pull --> git push
+
+ls -l --> WD (Filesystem)
+git ls-files --> SA / LR
+git status  -->  read the msg (untracked - WD, changes to be committed -- SA, Repo clean -- LR)
+
+git remote -v
+
+if git cloned is done, --> git remote add origin is not required
+
+ls -la ( a --> hidden files) --> .git  directory is found --> git is initialized
+git init --> if .git directory is not found
+
+.gitignore --> if you don't need git to track certain files, mention the files in this .gitignore
+
+git log --> to see all the commit Ids
+git log --oneline --> simplified way
+ 
+Branching
+---------
+Master --> Golden copy
+
+Features branches --> enhancements / new fetaures / POC
+
+git branch b1 master --> create b1 branch out of master --> copy all the commits of master to b1
+git checkout b1
+
+git checkout -b b2 master --> create b2 branch and checkout
+
+git push origin master
+git push origin b1/b2
+
+Merge --> Go to the Destination branch
+
+git merge src destination
+
+Rebase --> Feature branches to be synced up with Master branch
+------
+
+Go to the feature branch --> git rebase master
+
+git log --oneline
+1
+2
+3 -> 4+2 =6
+4 -> 2+2 = 4
+
+git show <commit_id> --> it will provide info on what excatly you have done as part of commit ID
+it shows the difference between the latest commit and last commit
+
+git revert <commit_id> --> it creates a new commit id to track
+
+git reset --> the most destructive in git
+git reset --hard <commit_id> --> HEAD points o this commit-id
+
+--soft
+--mixed
+
+file1, file2, file3 --> WD --> untracked files
+
+file4, file5
+
+git stash --> park your untracked changes (WD) -- temporary shell
+
+git stash list --> get the stash number
+
+
+git stash list
+
+  352  git show stash@{0}
+  353  git stash list
+  354  clear
+  355  git stash list
+  356  git stash pop stash@{0} --> Bring the temp shell --> WD
+  357  git stash list
+  358  git stash
+  359  git stash list
+  360  git stash apply stash@{0}
+  
+  pop --> deletes from temp shell and move to changes to WD
+  apply --> does not delete temp shell and copies the stash number to WD
+  
+  
+  361  git stash list
+  362  git status
+  363  git stash list
+  364  git stash drop stash@{0}
+  365  git stash list
+  366  git status
+  367  git stash -p --> Partial stash
+  file1, file2, file3, file4 --> WD --> untracked files
+  
+  file1, file3 to be moved to stashing area --> Partial stashing would be required. 
+  
+  git status
+  file1
+  file2
+  file3
+  file4
+  
+  git stash -p 
+  
+  
+  git status
+  file2
+  file4
+  
+  
+  git stash list --> file1, file3
+  
+  
+
+
+
+

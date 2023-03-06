@@ -1,0 +1,127 @@
+root@ip-172-31-7-224:~# history
+    1  apt update -y
+    2  clear
+    3  docker version
+    4  apt  install docker.io
+    5  clear
+    6  docker version
+    7  docker images
+    8  clear
+    9  docker images
+   10  docker pull httpd
+   11  docker images
+   12  clear
+   13  docker images
+   14  docker run -itd -p 82:80 httpd
+   15  docker ps
+   16  docker ps -a
+   17  docker exec -it e36eb06ed7d2 /bin/bash
+   18  docker images
+   19  docker stats
+   20  docker exec -it e36eb06ed7d2 /bin/bash
+   21  docker images
+   25  docker ps
+   26  docker images
+   27  docker commit e36eb06ed7d2 httpd_new
+   28  docker images
+   29  history
+15  mkdir project1
+   16  cd project1/
+   17  ls -
+   18  ls -l
+   19  touch Dockerfile
+   20  vi Dockerfile
+   21  cat Dockerfile
+   22  ls -l
+   23  touch index1.html
+   24  touch index2.html
+   25  vi index1.html
+   26  vi index2.html
+   27  cat Dockerfile
+   28  docker build . -t httpd1
+   29  docker images
+   30  docker run -itd -p 82:80 httpd1
+   31  docker ps
+   32  docker exec -it 307ff6a891fc /bin/bash
+   33  cat Dockerfile
+   34  docker images
+   35  clear
+   36  docker images
+   37  docker login
+   38  docker image tag httpd1:latest raushan8586/intellipaat-jan:latest
+   39  docker image push raushan8586/intellipaat-jan:latest
+   40  docker image tag httpd1:latest raushan8586/intellipaat-jan:httpd1
+   41  docker image push raushan8586/intellipaat-jan:httpd1
+   42  history
+   docker ps
+   48  docker volume ls
+   49  docker volume create intellipaat-jan
+   50  docker volume ls
+   51  docker ps
+   52  docker rm -f 307ff6a891fc
+   53  docker run -it --mount source=intellipaat-jan,target=/usr/local/apache2/htdocs -d -p 82:80 httpd
+   54  docker ps
+   55  docker exec -it 1de37dc576c3 /bin/bash
+   56  docker run -it --mount source=intellipaat-jan,target=/usr/local/apache2/htdocs -d -p 83:80 httpd
+   57  docker ps
+   58  docker rm -f 1de37dc576c3
+   59  docker ps
+   60  find / -name 'intellipaat-jan'
+   61  cd /var/lib/docker/volumes/intellipaat-jan
+   62  ls -l
+   63  cd _data
+   64  ls -l
+   65  cp index2 index3.html
+   66  cp index2.html index3.html
+   67  vi index3.html
+   68  history
+4  docker network ls
+    5  docker inspect e5c25387334a
+    6  docker run -itd -p 82:80 httpd
+    7  docker ps
+    8  docker inspect c5ba06002ce1
+    9  docker network ls
+   10  docker ps
+   11  docker logs c5ba06002ce1
+   12  docker network ls
+   13  docker-compose version
+   14  apt install docker-compose -y
+   15  docker-compose version
+   16  docker version
+   17  mkdir app1
+   18  cd app1
+   19  touch docker-compose.yaml
+   20  vi docker-compose.yaml
+   21  cat docker-compose.yaml
+   22  ls -l
+   23  docker-compose up -d
+   24  docker ps
+   25  docker rm -f c5ba06002ce1
+   26  clear
+   27  docker ps
+   28  docker network ls
+   29  docker inspect 26ae133fbfad
+   30  docker volume ls
+   31  cd /var/lib/docker/
+   32  ls -l
+   33  cd volumes/
+   34  ls -l
+   35  cd app1_db_data/
+   36  ls -l
+   37  cd _data
+   38  ls -l
+   39  cd ~
+   40  ls -l
+   41  cd app1/
+   42  ls -l
+   43  docker ps
+   44  docker exec -it fe0286b39092 /bin/bash
+   45  docker ps
+   46  docker-compose down
+   47  docker ps
+   48  docker-compose up -d
+   49  docker ps
+   50  docker logs eb476dcdc04e
+   51  docker network ls
+   52  vi docker-compose.yaml
+   53  history
